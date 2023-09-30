@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "0 string  SCHOOL  School data file" > /tmp/school.mgc && file -m /tmp/school.mgc "$1" && rm /tmp/school.mgc
+
