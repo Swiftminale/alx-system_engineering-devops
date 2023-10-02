@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# GitHub username and access token
+USERNAME=Swiftminale
+TOKEN=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
+
+# Add all changes to the staging area
+
+git add .
+
+# Commit changes with the provided commit message
+
+git commit -m "first commit"
+
+# Push changes to the GitHub repository using username and token
+
+git push https://$USERNAME:$TOKEN@github.com/Swiftminale/alx-system_engineering-devops.git master
+
