@@ -14,5 +14,6 @@ git commit -m "first commit"
 
 # Push changes to the GitHub repository using username and token
 
-git push https://$USERNAME:$TOKEN@github.com/Swiftminale/alx-system_engineering-devops.git master
+git push
+#https://$USERNAME:$TOKEN@github.com/Swiftminale/alx-system_engineering-devops.git master
 
