@@ -1,5 +1,3 @@
 #!/bin/bash
-IFS=':' read -ra PATH_ARRAY <<< "$PATH"
-DIR_COUNT=${#PATH_ARRAY[@]}
-echo "Number of directories in PATH: $DIR_COUNT"
+echo "Number of directories in PATH: $(IFS=':'; set -f; set -- $PATH; echo $#)"
 
