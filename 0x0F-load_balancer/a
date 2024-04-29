@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Set your GitHub username and password here
-username= Swiftminale
-password=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
+username= "Swiftminale"
+password="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"
 
 repository_url=$(git remote get-url origin)
 
