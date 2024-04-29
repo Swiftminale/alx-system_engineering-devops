@@ -1,5 +1,18 @@
 #!/bin/bash
-$(git add .)
-$(git commit -m "first commit")
-$(git push)
+
+echo "Enter your GitHub username: "
+read Swiftminale
+
+echo "Enter your GitHub password: "
+read -s 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
+
+repository_url=$(git remote get-url origin)
+
+git add .
+git commit -m "first commit"
+git push https://$username:$password@$repository_url
+
+# Clearing the stored credentials
+unset username
+unset password
 
