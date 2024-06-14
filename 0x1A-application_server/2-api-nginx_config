@@ -45,7 +45,7 @@ server {
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
 
-	server_name localhost pearmountain.space www.pearmountain.space web-01.pearmountain.space;
+	server_name localhost pearmountain.space www.pearmountain.space;
 
 	location / {
 		try_files $uri $uri/ =404;
@@ -58,7 +58,12 @@ server {
 
 	location /airbnb-dynamic/ {
 		include proxy_params;
-		proxy_pass http://127.0.0.1:8002/number_odd_or_even/;
+		proxy_pass http://127.0.0.1:8002/;
+	}
+
+	location /api/ {
+		include proxy_params;
+		proxy_pass http://127.0.0.1:8003; # no slash because we want full route with '/api/'
 	}
 
 	# pass PHP scripts to FastCGI server
